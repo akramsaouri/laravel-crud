@@ -1,0 +1,17 @@
+@extends('layout')
+@section('content')
+    <h1>Task List</h1>
+    <p class="lead"> Here's a list of all your tasks.</p>
+
+    @foreach($tasks as $task)
+        <h3>{{ $task->title }}</h3>
+        <p>{{ $task->description}}</p>
+        <p>
+            <a href="{{ route('tasks.show', $task->id) }}" class="btn btn-info">View Task</a>
+            <a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-primary">Edit Task</a>
+        </p>
+        <hr>
+    @endforeach
+
+    <a href="/tasks/create">Add a new one?</a></p>
+@stop
