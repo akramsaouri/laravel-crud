@@ -1,3 +1,3 @@
 # Laravel CRUD 
 
-Main Skeleton for Laravel CRUD application.
+Main Skeleton for Laravel CRUD applications.
